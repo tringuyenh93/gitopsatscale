@@ -4,7 +4,7 @@ metadata:
   name: root-application
   # You'll usually want to add your resources to the argocd namespace.
   namespace: argocd
-  # Add a this finalizer ONLY if you want these to cascade delete.
+  # Add this finalizer ONLY if you want these to cascade delete.
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -15,8 +15,8 @@ spec:
   source:
     repoURL: https://github.com/hoanglecao/gitopsatscale
     targetRevision: HEAD
-    path: ./app-of-apps/my-app-list/my-app
-   
+    path: ./app-of-apps/my-app-list
+
     # directory
     directory:
       recurse: false
@@ -27,8 +27,7 @@ spec:
 
   # Sync policy
   syncPolicy:
-    automated: # automated sync by default retries failed attempts 5 times with following delays between attempts ( 5s, 10s, 20s, 40s, 80s ); retry controlled using `retry` field.
-      prune: true # Specifies if resources should be pruned during auto-syncing ( false by default ).
-      selfHeal: true # Specifies if partial app sync should be executed when resources are changed only in target Kubernetes cluster and no git change detected ( false by default ).
-      allowEmpty: false # Allows deleting all application resources during automatic syncing ( false by default ).
-  
+    automated: # automated sync by default retries failed attempts 5 times with the following delays between attempts (5s, 10s, 20s, 40s, 80s); retry controlled using the `retry` field.
+      prune: true # Specifies if resources should be pruned during auto-syncing (false by default).
+      selfHeal: true # Specifies if a partial app sync should be executed when resources are changed only in the target Kubernetes cluster and no git change is detected (false by default).
+      allowEmpty: false # Allows deleting all application resources during automatic syncing (false by default).
