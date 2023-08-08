@@ -19,7 +19,7 @@ spec:
    
   # Destination cluster and namespace to deploy the application
   destination:
-    server: https://kubernetes.default.svc
+    server: https://F9AF6FB1F9D894147EA01E45F4D1852A.gr7.us-east-1.eks.amazonaws.com
     namespace: frontend
 
   # Sync policy
