@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: billing-application-set
-  namespace: externaleks
+  namespace: argocd
 spec:
   generators:
   - list:
