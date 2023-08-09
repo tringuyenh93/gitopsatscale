@@ -20,13 +20,13 @@ spec:
 
       # Source of the application manifests
       source:
-        repoURL: https://github.com/codefresh-contrib/gitops-cert-level-2-examples.git
+        repoURL: https://github.com/hoanglecao/gitopsatscale
         targetRevision: HEAD
         path: ./application-sets/manifests
       
       # Destination cluster and namespace to deploy the application
       destination:
-        server: https://kubernetes.default.svc
+        server: https://D85933C1B5B538CCBDD24CF74BC8F76F.gr7.us-east-1.eks.amazonaws.com
         namespace: '{{namespace}}'
 
       # Sync policy
