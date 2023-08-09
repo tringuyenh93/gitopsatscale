@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: multi-cluster-application-set
-  namespace: externaleks
+  namespace: argocd
 spec:
   generators:
   - clusters: {} # Automatically use all clusters defined within Argo CD
