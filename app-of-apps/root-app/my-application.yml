@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://github.com/hoanglecao/gitopsatscale
     targetRevision: HEAD
-    path: ./app-of-apps/my-app-list
+    path: ./app-of-apps/my-app-list/infrastructure-provisioning
 
     # directory
     directory:
