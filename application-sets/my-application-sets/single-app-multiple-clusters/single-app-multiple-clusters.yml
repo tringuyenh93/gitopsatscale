@@ -15,7 +15,7 @@ spec:
 
       # Source of the application manifests
       source:
-        repoURL: https://github.com/hoanglecao/gitopsatscale
+        repoURL: https://github.com/tringuyenh93/gitopsatscale
         targetRevision: HEAD
         path: ./application-sets/manifests
       
